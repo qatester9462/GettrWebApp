@@ -11,9 +11,6 @@ describe('Home Screen Test Cases', () => {
     const loginEmail = Cypress.config('users').user4.userEmail
     const loginPassword = Cypress.config('users').user4.password
     beforeEach(() => {
-        cy.clearAllCookies()
-        cy.clearAllLocalStorage()
-        cy.clearAllSessionStorage()
         cy.visit('/')
         loginPage.goToLogin() //Go to login
         loginPage.loginWithEmailPassword(loginEmail, loginPassword) //Login using email password

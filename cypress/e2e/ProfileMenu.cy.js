@@ -14,9 +14,6 @@ describe('Profile Menu Test Cases', () => {
     const string = (reuseableCode.generateRandomString(3))
 
     beforeEach(() => {
-        cy.clearAllCookies()
-        cy.clearAllLocalStorage()
-        cy.clearAllSessionStorage()
         cy.visit('/');
         loginPage.goToLogin() //Go to login
         loginPage.loginWithEmailPassword(loginEmail, loginPassword) //Login using email password

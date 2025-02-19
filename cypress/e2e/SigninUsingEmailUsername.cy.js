@@ -14,9 +14,6 @@ describe('Login test cases using email and phone', () => {
   const loginPassword = Cypress.config('users').user1.password
   //using user3 for forgot password case
   beforeEach(() => {
-    cy.clearAllCookies()
-    cy.clearAllLocalStorage()
-    cy.clearAllSessionStorage()
     cy.visit('/')
   })
   it('TC_Login_001 - Verify login with valid credentials', () => {

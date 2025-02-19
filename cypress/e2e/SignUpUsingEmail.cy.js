@@ -17,9 +17,6 @@ describe('SignUp Cases', () => {
     const username = (reuseableCode.generateRandomString(5))
     const password = (reuseableCode.getRandomPassword(7))
     beforeEach(() => {
-        cy.clearAllCookies()
-        cy.clearAllLocalStorage()
-        cy.clearAllSessionStorage()
         cy.visit('/')
     })
     it('TC_SignUp_001 - Verify SignUp functionality', () => {

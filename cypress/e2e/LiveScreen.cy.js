@@ -12,9 +12,6 @@ describe('Live Screen Page Test Cases', () => {
     const loginPassword = Cypress.config('users').user5.password
 
     beforeEach(() => {
-        cy.clearAllCookies()
-        cy.clearAllLocalStorage()
-        cy.clearAllSessionStorage()
         //const prodUrl = Cypress.env('prod');
         cy.visit('/');
         loginPage.goToLogin() //Go to login

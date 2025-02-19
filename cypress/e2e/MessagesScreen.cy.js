@@ -16,9 +16,6 @@ describe('Messages Screen Test Cases', () => {
     const loginPassword = Cypress.config('users').user5.password
     const username = Cypress.config('users').user5.username
     beforeEach(() => {
-        cy.clearAllCookies()
-        cy.clearAllLocalStorage()
-        cy.clearAllSessionStorage()
 
     })
     it('TC_MessagesScreen_001 - Verify that user is able to goto "Messages" Page', () => {

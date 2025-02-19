@@ -14,9 +14,6 @@ describe('Explore Section Test Cases', () => {
     const loginPassword = Cypress.config('users').user5.password
     const username = Cypress.config('users').user5.username
     beforeEach(() => {
-        cy.clearAllCookies()
-        cy.clearAllLocalStorage()
-        cy.clearAllSessionStorage()
         cy.visit('/')
         loginPage.goToLogin() //Go to login
         loginPage.loginWithEmailPassword(loginEmail, loginPassword) //Login using email password

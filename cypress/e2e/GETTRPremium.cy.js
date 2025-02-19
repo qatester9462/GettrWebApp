@@ -7,17 +7,13 @@ describe('GETTR Premium Test Cases ', () => {
     const loginEmail = Cypress.config('users').user1.userEmail
     const loginPassword = Cypress.config('users').user1.password
     
-
     beforeEach(() => {
-        cy.clearAllCookies()
-        cy.clearAllLocalStorage()
-        cy.clearAllSessionStorage()
         cy.visit('/');
         loginPage.goToLogin() //Go to login
         loginPage.loginWithEmailPassword(loginEmail, loginPassword) //Login using email password
         cy.verifyToast('Welcome back')
     })
-    it.only('TC_PM_015 -Verify GETTR premium trial', () => {
+    it('TC_PM_015 -Verify GETTR premium trial', () => {
         profile.ClickOnProfileIcon()
         profile.GETTRPremium()
     })
